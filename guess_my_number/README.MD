@@ -1,2 +1,2 @@
-# simple-js-project
->  ✨ this repo is for some simple javascript projects ✨
+# guess-my-number
+>  ✨ this project is guessing a number with a choise a number 👈👈👈
