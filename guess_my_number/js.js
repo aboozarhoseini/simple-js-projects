@@ -76,8 +76,9 @@ function getMaxNumber() {
 }
 
 function createSpanScoreItems(text, arr, color) {
-    let listOfScores = document.querySelector('.listOfScores');
-    const listOfScoresSpan = document.createElement('span');
+    let listOfScores = document.querySelector( '.listOfScores' );
+    listOfScores.classList.add('listOfScores-show');
+    const listOfScoresSpan = document.createElement( 'span' );
     listOfScoresSpan.classList.add('slideUp');
     listOfScoresSpan.innerHTML = `${text} is : ${arr}`;
     listOfScoresSpan.style.background = color;

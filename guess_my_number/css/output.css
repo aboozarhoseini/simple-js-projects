@@ -115,6 +115,10 @@ body {
   box-shadow: -4px 10px 6px 2px #908e8e;
   overflow: auto;
   text-align: center;
+  display: none;
+}
+.listOfScores-show{
+  display: block;
 }
 .listOfScores span {
   background-color: #fff;
