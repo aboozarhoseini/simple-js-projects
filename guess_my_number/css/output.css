@@ -57,34 +57,13 @@ body {
   justify-content: center;
   align-items: center;
   font-size: 20px;
+  transition: 0.5s all;
 }
 
 .modalBoxSlideDown {
-  animation: slideDownModal 0.5s 1;
-  animation-fill-mode: forwards;
+  top: 100px;
 }
 
-.modalBoxSlideUp {
-  animation: slideUpModal 0.5s 1;
-  animation-fill-mode: forwards;
-}
-
-@keyframes slideDownModal {
-  0% {
-    top: -300px;
-  }
-  100% {
-    top: 100px;
-  }
-}
-@keyframes slideUpModal {
-  0% {
-    top: 100px;
-  }
-  100% {
-    top: -300px;
-  }
-}
 /* ------------------------ */
 /* particle */
 /* ------------------------ */
@@ -117,9 +96,6 @@ body {
   text-align: center;
   display: none;
 }
-.listOfScores-show{
-  display: block;
-}
 .listOfScores span {
   background-color: #fff;
   display: inline-block;
@@ -128,6 +104,10 @@ body {
 }
 .listOfScores .slideUp {
   animation: slideUp 1s 1;
+}
+
+.listOfScores-show {
+  display: block;
 }
 
 /* ------------------------ */

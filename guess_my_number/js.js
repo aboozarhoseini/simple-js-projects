@@ -17,7 +17,7 @@ const sevedNumber = Math.round(Math.random() * 20);
 let listItems = localStorage.getItem('score') == null ? [] : localStorage.getItem('score');
 // let listItems = [];
 
-// console.log(listItems);   //!👈👈👈 for delete ...............................................
+// console.log(listItems); //!👈👈👈 for delete ...............................................
 
 function decreesChance() {
     let showScoreNumber = Number(timeOfChoose.innerHTML);
@@ -38,13 +38,8 @@ function decreesChance() {
     }
 }
 
-function showMOdalBox() {
+function showModalBox() {
     blackDiv.classList.toggle('blackDivVizible');
-
-    modalBox.classList.forEach(e => {
-        if (e === 'modalBoxSlideUp') modalBox.classList.remove('modalBoxSlideUp');
-    });
-
     modalBox.classList.add('modalBoxSlideDown');
 }
 
@@ -76,9 +71,9 @@ function getMaxNumber() {
 }
 
 function createSpanScoreItems(text, arr, color) {
-    let listOfScores = document.querySelector( '.listOfScores' );
-    listOfScores.classList.add('listOfScores-show');
-    const listOfScoresSpan = document.createElement( 'span' );
+    let listOfScores = document.querySelector('.listOfScores');
+    listOfScores.classList.add( 'listOfScores-show' );
+    const listOfScoresSpan = document.createElement('span');
     listOfScoresSpan.classList.add('slideUp');
     listOfScoresSpan.innerHTML = `${text} is : ${arr}`;
     listOfScoresSpan.style.background = color;
@@ -169,7 +164,7 @@ checkBtn.addEventListener('click', e => {
     let inputVal = inputNumber.value;
     if (inputVal > 20 || inputVal < 0 || inputVal == '') {
         // alert( 'press a numbeer between 0 to 20' );
-        showMOdalBox();
+        showModalBox();
     } else {
         if (inputVal > sevedNumber) {
             decreesChance();
@@ -196,7 +191,7 @@ console.log(`number is : ${sevedNumber}`); //!👈👈👈 for delete ..........
 blackDiv.addEventListener('click', () => {
     blackDiv.classList.toggle('blackDivVizible');
     modalBox.classList.remove('modalBoxSlideDown');
-    modalBox.classList.add('modalBoxSlideUp');
+    // modalBox.classList.add('modalBoxSlideUp');
 });
 
 showScoreItemList();

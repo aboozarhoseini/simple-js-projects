@@ -79,32 +79,34 @@ body {
     justify-content: center;
     align-items: center;
     font-size: 20px;
+    transition: 0.5s all;
 }
 .modalBoxSlideDown {
-    animation: slideDownModal 0.5s 1;
-    animation-fill-mode: forwards;
+    // animation: slideDownModal 0.5s 1;
+    // animation-fill-mode: forwards;
+    top: 100px;
 }
-.modalBoxSlideUp {
-    animation: slideUpModal 0.5s 1;
-    animation-fill-mode: forwards;
-}
+// .modalBoxSlideUp {
+//     animation: slideUpModal 0.5s 1;
+//     animation-fill-mode: forwards;
+// }
 
-@keyframes slideDownModal {
-    0% {
-        top: -300px;
-    }
-    100% {
-        top: 100px;
-    }
-}
-@keyframes slideUpModal {
-    0% {
-        top: 100px;
-    }
-    100% {
-        top: -300px;
-    }
-}
+// @keyframes slideDownModal {
+//     0% {
+//         top: -300px;
+//     }
+//     100% {
+//         top: 100px;
+//     }
+// }
+// @keyframes slideUpModal {
+//     0% {
+//         top: 100px;
+//     }
+//     100% {
+//         top: -300px;
+//     }
+// }
 
 /* ------------------------ */
 /* particle */
@@ -117,8 +119,6 @@ body {
     top: -10%;
     box-sizing: border-box;
 }
-
-
 
 /* ------------------------ */
 /* listOfScores */
@@ -141,6 +141,7 @@ body {
     box-shadow: -4px 10px 6px 2px #908e8e;
     overflow: auto;
     text-align: center;
+    display: none;
     span {
         background-color: #fff;
         display: inline-block;
@@ -150,6 +151,10 @@ body {
     .slideUp {
         animation: slideUp 1s 1;
     }
+}
+
+.listOfScores-show {
+    display: block;
 }
 
 /* ------------------------ */
