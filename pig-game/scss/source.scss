@@ -1,0 +1,119 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Nunito", sans-serif;
+    font-weight: 400;
+    color: #333;
+    height: 100vh;
+    background: linear-gradient(110deg, rgba(81, 136, 184) 0%, rgba(89, 111, 98, 1) 100%);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin flexGlobal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main {
+    position: relative;
+    height: 30rem;
+    width: 50rem;
+    margin: 1rem;
+    background-color: #005f75;
+    box-shadow: 0.5rem 0.5rem 0.8rem;
+    border-radius: 0.5rem;
+    display: flex;
+    text-align: center;
+}
+
+.player1,
+.player2 {
+    background-color: #d94551;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-family: "Mochiy Pop P One", sans-serif;
+    .subPlayer {
+        @include flexGlobal();
+    }
+    .playerTitle {
+        flex-grow: 0.5;
+    }
+    .playerScore {
+        flex-grow: 0.2;
+        // background-color: yellow;
+    }
+    .playerButton {
+        flex-grow: 2;
+        section {
+            font-family: "Mochiy Pop P One", sans-serif;
+            width: 54%;
+            height: 34%;
+            border: none;
+            border-radius: 0.5rem;
+            // cursor: pointer;
+            background-color: #c3d898;
+            transition: all 0.2s;
+            font-family: "Lato", sans-serif;
+            font-size: 1.5rem;
+            color: #596f62;
+            .counter {
+                // background-color: #fff;
+                margin-top: 1rem;
+            }
+        }
+    }
+}
+.player2 {
+    background-color: #e06771;
+    flex-grow: 1;
+}
+
+.dice {
+    height: 5rem;
+    width: 5rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -120%);
+}
+
+.btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 8rem;
+    height: 2rem;
+    border: none;
+    background-color: rgba($color: #fff, $alpha: 0.8);
+    border-radius: 2rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    backdrop-filter: blur(50px);
+    &:hover {
+        background-color: #7ea16b;
+        transform: translate(-50%, -40%);
+        color: #fff;
+        // border: 1px solid black;
+    }
+    &:active {
+        transform: translate(-50%, -30%);
+    }
+}
+.btnRoll {
+    top: 80%;
+}
+.btnHold {
+    top: 90%;
+}
+.btnStart {
+    top: 10%;
+}

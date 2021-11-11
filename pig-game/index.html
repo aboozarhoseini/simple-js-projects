@@ -1,13 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>pig-game</title>
-</head>
-<body>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title>pig-game</title>
+
+
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,900&family=Mochiy+Pop+P+One&display=swap"
+            rel="stylesheet">
+    </head>
+
+    <body>
+        <main>
+
+            <!-- players -->
+            <section class="player1">
+                <div class="subPlayer playerTitle">
+                    <h1>player1</h1>
+                </div>
+                <div class="subPlayer  playerScore">
+                    <h1>0</h1>
+                </div>
+                <div class="subPlayer playerButton">
+                    <section>
+                        <div>Current</div>
+                        <div class="counter">0</div>
+                    </section>
+                </div>
+            </section>
+            <section class="player2">
+                <div class="subPlayer playerTitle">
+                    <h1>player1</h1>
+                </div>
+                <div class="subPlayer  playerScore">
+                    <h1>0</h1>
+                </div>
+                <div class="subPlayer playerButton">
+                    <section>
+                        <div>Current</div>
+                        <div class="counter">0</div>
+                    </section>
+                </div>
+            </section>
+
+            <!-- images -->
+            <img src="images/dice-1.png" alt="dice" class="dice">
+            <button class="btn btnStart">🔄 startGame</button>
+            <button class="btn btnRoll"> 🎲 newRoll</button>
+            <button class="btn btnHold"> 📥 holdScore</button>
+        </main>
         <script src="js.js"></script>
-</body>
+    </body>
+
 </html>
