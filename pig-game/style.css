@@ -16,45 +16,38 @@ body {
 
 main {
   position: relative;
-  height: 30rem;
-  width: 50rem;
+  height: 80%;
+  width: 50%;
   margin: 1rem;
-  background-color: #005f75;
+  background-color: #d94551;
   box-shadow: 0.5rem 0.5rem 0.8rem;
   border-radius: 0.5rem;
   display: flex;
   text-align: center;
 }
 
-.player1,
-.player2 {
-  background-color: #d94551;
-  flex-grow: 1;
+.player {
+  flex: 50%;
   display: flex;
   flex-direction: column;
   text-align: center;
   font-family: "Mochiy Pop P One", sans-serif;
 }
-.player1 .subPlayer,
-.player2 .subPlayer {
+.player .subPlayer {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.player1 .playerTitle,
-.player2 .playerTitle {
+.player .playerTitle {
   flex-grow: 0.5;
 }
-.player1 .playerScore,
-.player2 .playerScore {
+.player .playerScore {
   flex-grow: 0.2;
 }
-.player1 .playerButton,
-.player2 .playerButton {
+.player .playerButton {
   flex-grow: 2;
 }
-.player1 .playerButton section,
-.player2 .playerButton section {
+.player .playerButton section {
   font-family: "Mochiy Pop P One", sans-serif;
   width: 54%;
   height: 34%;
@@ -66,14 +59,20 @@ main {
   font-size: 1.5rem;
   color: #596f62;
 }
-.player1 .playerButton section .counter,
-.player2 .playerButton section .counter {
+.player .playerButton section .counter {
   margin-top: 1rem;
 }
 
 .player2 {
-  background-color: #e06771;
   flex-grow: 1;
+}
+
+.playerActive {
+  background-color: rgba(224, 103, 113, 0.8);
+}
+
+.playerWin {
+  background-color: rgba(124, 255, 2, 0.8);
 }
 
 .dice {
@@ -106,6 +105,21 @@ main {
 }
 .btn:active {
   transform: translate(-50%, -30%);
+}
+
+.btnNoHover {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 8rem;
+  height: 2rem;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 2rem;
+  cursor: not-allowed;
+  transition: all 0.2s;
+  backdrop-filter: blur(50px);
 }
 
 .btnRoll {

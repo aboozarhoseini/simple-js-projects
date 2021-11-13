@@ -22,24 +22,24 @@ body {
 }
 main {
     position: relative;
-    height: 30rem;
-    width: 50rem;
+    height: 80%;
+    width: 50%;
     margin: 1rem;
-    background-color: #005f75;
+    background-color: #d94551;
     box-shadow: 0.5rem 0.5rem 0.8rem;
     border-radius: 0.5rem;
     display: flex;
     text-align: center;
 }
 
-.player1,
-.player2 {
-    background-color: #d94551;
-    flex-grow: 1;
+.player {
+    // background-color: #d94551;
+    flex: 50%;
     display: flex;
     flex-direction: column;
     text-align: center;
     font-family: "Mochiy Pop P One", sans-serif;
+    
     .subPlayer {
         @include flexGlobal();
     }
@@ -72,9 +72,19 @@ main {
     }
 }
 .player2 {
-    background-color: #e06771;
+    
+    
     flex-grow: 1;
 }
+.playerActive{
+    background-color: rgba($color: #e06771, $alpha: .8);
+}
+
+.playerWin{
+    background-color: rgba($color: #7cff02, $alpha: .8);
+}
+
+
 
 .dice {
     height: 5rem;
@@ -107,6 +117,23 @@ main {
     &:active {
         transform: translate(-50%, -30%);
     }
+}
+
+.btnNoHover {
+    
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 8rem;
+    height: 2rem;
+    border: none;
+    background-color: rgba($color: #fff, $alpha: 0.8);
+    border-radius: 2rem;
+    cursor: not-allowed;
+    transition: all 0.2s;
+    backdrop-filter: blur(50px);
+ 
 }
 .btnRoll {
     top: 80%;
