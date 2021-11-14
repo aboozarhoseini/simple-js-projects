@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+    box-sizing: content-box;
+    /* font-size: 16; */
+}
+
+body{
+    box-sizing: inherit;
+    background-image: url('./background.jpg');
+    background-position: center;
+    /* background-repeat: no-repeat; */
+    background-size: cover;
+    height: 75vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* align-content: center; */
+}
+
+.boxDiv{
+    background-color: rgba(88, 87, 88, 0.568);
+    width: 150px;
+    height: 150px;
+    border: 10px solid rgb(201, 8, 8);
+    transform: translate(0%,50%);
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 50px;
+    box-sizing: border-box;
+}
+.keyLight{
+    border: 10px solid rgb(255, 203, 91);
+}
