@@ -1,5 +1,6 @@
-:root{
-    --colorBase : rgb(15, 15, 41);
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap');
+:root {
+    --colorBase: rgb(15, 15, 41);
 }
 * {
     margin: 0;
@@ -14,7 +15,7 @@ body {
 .bx {
     background-color: lightblue;
     width: 600px;
-    height: 200px;
+    height: 600px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -23,10 +24,38 @@ body {
 
 .digitTime {
     display: block;
+    /* background-color: rgb(123, 166, 180); */
+    background-color: transparent;
+    padding: 1rem 2rem;
+    border-radius: 1.8rem;
+    /* border: 1px solid #000; */
+    margin-bottom: 50px;
+    font-size: 2rem;
+    font-family: serif;
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 0.5rem;
+    width: 350px;
+    text-align: center;
+    box-shadow: 0 0 1rem lightslategrey;
 }
+.hour,
+.min,
+.sec {
+    display: inline-block;
+}
+.hour {
+    width: 110px;
+}
+.min {
+    width: 120px;
+}
+.sec {
+    width: 60px;
+}
+
 .clock {
     background-color: chartreuse;
-    background: linear-gradient(90deg, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
+    background: linear-gradient(90deg, rgba(63, 94, 251, 1) 0%, rgba(252, 70, 107, 1) 100%);
     width: 150px;
     height: 150px;
     border-radius: 100px;
@@ -45,7 +74,7 @@ body {
     position: relative;
     transform-origin: bottom;
     transform: translate(0, -50%);
-    box-shadow: 0 0  0.2rem lightslategray;
+    box-shadow: 0 0 0.2rem lightslategray;
     border-radius: 2px 2px 0 0;
 }
 .secTimer {
@@ -74,7 +103,6 @@ body {
     height: 0;
     position: absolute;
     top: -10px;
-    
 }
 .hourTimer::after {
     border-left: 4px solid transparent;
@@ -96,14 +124,25 @@ body {
 }
 
 
-.numbers{
-    position: absolute;
+.setting{
+    background-color: lightcoral;
+    display: flex;
+    justify-content: right;
+    align-items: flex-end;
+    flex-direction: column;
+    margin-bottom: 20px;
+    /* padding: 2rem; */
+    width: 400px;
 }
-.numbers .number{
-    background-color: var(--colorBase);
+.checking{
+    /* background-color: blue; */
     display: block;
-    background-color: red;
-    height: 10px;
-    width: 10px;
+    width: 100%;
+    text-align: center;
+    margin-top: 50px;
+}
 
+.sectionMinBlock{
+    background-color: blueviolet;
+    
 }

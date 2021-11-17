@@ -12,16 +12,43 @@
     <body>
 
         <div class="bx">
-            <span class="digitTime"></span>
+
+            <!-- setting -->
+            <div class="setting">
+                <section class="sectionMin">
+                    <label for="minInput" >min:</label>
+                    <input type="number" name="minInput" id="minInput"  class="setting_input" disabled>
+                </section>
+
+                <section class="sectionSec">
+                    <label for="secInput">sec:</label>
+                    <input type="number" name="secInput" id="secInput" class="setting_input" disabled>
+                </section>
+                <section class="sectionHour">
+                    <label for="hourInput">hour:</label>
+                    <input type="number" name="hourInput" id="hourInput" class="setting_input" disabled>
+                </section>
+                <section class="checking">   
+                    <label for="d">automate</label>
+                    <input type="radio" name="checking" id="rd_auto" checked>
+                    <label for="a">manual</label>
+                    <input type="radio" name="checking" id="rd_manu">
+                </section>
+            </div>
+            <!-- digitalTime -->
+            <div class="digitTime">
+                <span class="hour">1</span>
+                <span class="min"> 2</span>
+                <span class="sec">3</span>
+            </div>
+
+            <!-- analogeTime -->
             <div class="clock">
                 <span class="secTimer"></span>
                 <span class="minTimer"></span>
                 <span class="hourTimer"></span>
-                <div class="numbers">
-                    <span class="num1 number"></span>
-                    <span class="numb2 number"></span>
-                </div>
             </div>
+
         </div>
 
         <script src="js.js"></script>
