@@ -13,22 +13,25 @@
 
         <div class="bx">
 
+            <!-- 
+
+                <input type="number" min="0" step="5" max="100">
+             -->
             <!-- setting -->
             <div class="setting">
-                <section class="sectionMin">
-                    <label for="minInput">min:</label>
-                    <input type="number" name="minInput" id="minInput" class="setting_input" disabled>
-                </section>
-
-                <section class="sectionSec">
-                    <label for="secInput">sec:</label>
-                    <input type="number" name="secInput" id="secInput" class="setting_input" disabled>
-                </section>
                 <section class="sectionHour">
                     <label for="hourInput">hour:</label>
-                    <input type="number" name="hourInput" id="hourInput" class="setting_input" disabled>
+                    <input type="number" name="hourInput" id="hourInput" class="setting_input" disabled min="0" max="24" >
                 </section>
-                <section class="sectionSetBtn " >
+                <section class="sectionMin">
+                    <label for="minInput">min:</label>
+                    <input type="number" name="minInput" id="minInput" class="setting_input" disabled  min="0" max="60">
+                </section>
+                <section class="sectionSec">
+                    <label for="secInput">sec:</label>
+                    <input type="number" name="secInput" id="secInput" class="setting_input" disabled min="0" max="60">
+                </section>
+                <section class="sectionSetBtn ">
                     <button class="setting_input" disabled>set</button>
                 </section>
                 <section class="checking">

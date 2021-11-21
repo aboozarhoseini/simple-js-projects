@@ -128,7 +128,7 @@ body {
     background-color: lightcoral;
     display: flex;
     justify-content: right;
-    align-items: flex-end;
+    align-items: center;
     flex-direction: column;
     margin-bottom: 20px;
     /* padding: 2rem; */

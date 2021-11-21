@@ -27,12 +27,13 @@ class PersonalDate {
   seconds = this.date.getSeconds();
 }
 
-
-
-
-
+let p,
+  hour,
+  min,
+  sec,
+  editedMins,
+  editedHours = 0;
 function showTime() {
-  let p, hour, min, sec, editedMins, editedHours;
   if (flag) {
     p = new PersonalDate();
     editedHours = p.hours;
@@ -41,12 +42,30 @@ function showTime() {
     min = p.minutes < 10 ? `0${Math.trunc(p.minutes)}` : Math.trunc(p.minutes);
     sec = p.seconds < 10 ? `0${p.seconds}` : p.seconds;
   } else {
-    hour = Number(hourInput.value);
-    min = Number(minInput.value);
-    sec = Number(secInput.value);
+    let oldHour = Number(hourInput.value);
+    let oldMin = Number(minInput.value);
+    let oldSec = Number(secInput.value);
+    oldSec++;
+    if (oldSec > 59) {
+      oldSec = 0;
+      oldMin++;
+    }
+    if (oldMin > 59) {
+      oldMin = 0;
+      oldHour++;
+    }
+
+
+    if (oldHour < 10) {
+      hour = `0${oldHour}`;
+    } else {
+      hour = (oldHour % 24 < 10) ?`0${oldHour % 24}` :oldHour % 24;
+    }
+
+    sec = oldSec < 10 ? `0${oldSec}` : oldSec;
+    min = oldMin < 10 ? `0${oldMin}` : oldMin;
     editedHours = hour;
-      editedMins = min;
-      
+    editedMins = min;
   }
 
   digitalHour.textContent = `${hour} : `;
@@ -57,9 +76,9 @@ function showTime() {
   hourTimer.style.transform = `translate(-8px,-50%) rotateZ(${editedHours * 30}deg)`;
 
   // add valur for inputs
-  //   minInput.value = min;
-  //   hourInput.value = hour;
-  //   secInput.value = sec;
+  minInput.value = min;
+  hourInput.value = hour;
+  secInput.value = sec;
 
   setTimeoutForClock = setTimeout(showTime, 1000);
 }
@@ -81,9 +100,8 @@ const resetTime = () => {
 
 rd_auto.addEventListener("change", () => {
   flag = true;
-  setting_inputs.forEach(e => {
-    e.setAttribute("disabled", "disabled");
-  });
+  disableInputs();
+  clearTimeout(setTimeoutForClock);
   showTime();
 });
 
@@ -96,11 +114,19 @@ rd_manu.addEventListener("change", () => {
   resetTime();
 });
 
-btnSet.addEventListener("click", () => {
+btnSet.addEventListener("click", e => {
   if (minInput.value === "" || secInput.value === "" || hourInput.value === "" || minInput.value < 0 || secInput.value < 0 || hourInput.value < 0) {
     alert("somethings is empty");
   } else {
     //   flag = true;
     showTime();
+    e.target.setAttribute("disabled", "disabled");
+    disableInputs();
   }
 });
+
+function disableInputs() {
+  setting_inputs.forEach(e => {
+    e.setAttribute("disabled", "disabled");
+  });
+}

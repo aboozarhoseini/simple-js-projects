@@ -10,3 +10,5 @@
 > ### [pig game](https://aboozarhoseini.github.io/simple-js-projects/pig-game/index.html)
 
 > ### [DrumKit](https://aboozarhoseini.github.io/simple-js-projects/DrumKit/index.html)
+
+> ### [alalogTimer]( https://aboozarhoseini.github.io/simple-js-projects/alalogTimer/index.html)
