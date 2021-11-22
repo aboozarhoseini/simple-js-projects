@@ -1,0 +1,60 @@
+html {
+  font-size: 10px;
+}
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.main {
+  box-sizing: inherit;
+  background-color: rgb(6, 6, 56);
+  height: 100vh;
+  color: #fff;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+}
+
+.sub1 {
+  /* background-color: lightskyblue; */
+  height: 100px;
+  border: 1px solid #000;
+  margin-top: 20px;
+  text-transform: capitalize;
+}
+.sub1 h1 {
+  font-size: 8rem;
+  margin: 0;
+  padding: 0;
+}
+.sub2 {
+  height: 100px;
+  text-transform: capitalize;
+  margin-top: 10px;
+  border: 1px solid rgb(204, 204, 204);
+  font-size: 5rem;
+}
+.sub2 input {
+  font-size: 5rem;
+  background-color: blue;
+}
+.sub3 {
+  background-color: yellow;
+  margin-top: 6rem;
+  background-image: url(https://picsum.photos/id/1003/500/500);
+  width: 500px;
+  height: 500px;
+  filter: blur(5px);
+  background-position: center;
+  background-size: cover;
+  border-style: solid;
+  border-color: #000;
+  /* box-sizing: inherit; */
+}
+.sub3 image {
+  margin: 0;
+  padding: 0;
+}
